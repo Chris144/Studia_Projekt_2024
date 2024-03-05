@@ -1,0 +1,16 @@
+image: python:3.8
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - pip install -r requirements.txt
+    - python setup.py build
+
+test:
+  stage: test
+  script:
+    - python -m unittest discover -s tests
