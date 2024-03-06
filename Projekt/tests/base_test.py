@@ -17,11 +17,9 @@ class BaseTest(unittest.TestCase):
         self.driver.implicitly_wait(10)
 
     def screenshot(self):
-        self.screenshot = ImageGrab.grab()
         datetime.now()
         screenDatetime = datetime.now().strftime('%d-%m-%Y-%H-%M-%S')
-        self.driver.save_screenshot(f"../screenshot_from_tests/account_screen/screenshot-{screenDatetime}.png")
-        self.screenshot.close()
+        self.driver.save_screenshot(f"../screen_tests/screenshot-{screenDatetime}.png")
 
     def tearDown(self):
         self.driver.quit()
