@@ -14,3 +14,12 @@ class AccountLocators:
     LOGIN_BUTTON = (By.CSS_SELECTOR, 'input[value=Login]')
     LOGIN_REMEMBER_ME = (By.ID, 'rememberme')
 
+
+class SortLocators:
+    # Sorting locators
+    MENU_ITEM = (By.ID, 'menu-item-128')
+    ORDER_BY = (By.CLASS_NAME, 'orderby')
+    FORM = (By.CLASS_NAME, 'woocommerce-ordering')
+    OPTION_POPULARITY = (By.CSS_SELECTOR, 'select.orderby>option:nth-child(2)')
+    OPTION_NEWNESS = (By.CSS_SELECTOR, 'select.orderby>option:nth-child(4)')
+    OPTION_AVERAGE = (By.CSS_SELECTOR, 'select.orderby>option:nth-child(3)')
