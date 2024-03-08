@@ -13,7 +13,10 @@ class SortingTest(BaseTest):
         super().screenshot()
 
     """
-        Test checking sorting 
+        Test checking sorting by:
+            - popularity
+            - newness
+            - average rating
     """
 
     def test_checking_sorting_by(self):
@@ -57,5 +60,5 @@ class SortingTest(BaseTest):
         self.screenshot()
         # 13. Checking expected effects using assertions
         sort_average = self.driver.find_element(*SortLocators.OPTION_AVERAGE)
-        self.assertEqual("Sort by newness", sort_average.text)
+        self.assertEqual("Sort by average rating", sort_average.text)
         print(sort_average.text)
